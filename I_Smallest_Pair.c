@@ -19,7 +19,7 @@ int main()
 
         int min_sum = INT_MAX;
 
-        for (int i = 0; i < n ; i++)
+        for (int i = 0; i < n; i++)
         {
             for (int j = i + 1; j < n; j++)
             {
