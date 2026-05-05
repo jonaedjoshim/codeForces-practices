@@ -2,32 +2,19 @@
 
 int main()
 {
-    char s[1001];
-    scanf("%s", s);
+    int n, r = 0, temp;
 
-    int length = strlen(s);
-    int signal = 1;
-    int i = 0;
-    int j = length - 1;
+    scanf("%d", &n);
+    temp = n;
 
-    while (i < j)
+    while (n)
     {
-        if (s[i] != s[j])
-        {
-            signal = 0;
-            break;
-        }
-        i++, j--;
+        r = r * 10 + n % 10;
+        n /= 10;
     }
 
-    if (signal == 1)
-    {
-        printf("YES\n");
-    }
-    else
-    {
-        printf("NO\n");
-    }
+    printf("%d\n", r);
+    printf(temp == r ? "YES\n" : "NO\n");
 
     return 0;
 }
